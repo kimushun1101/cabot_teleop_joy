@@ -5,21 +5,16 @@ The following 2 compositions are launched.
 - cabot_teleop_joy joy_to_cmd_vel_composition
 
 ## How to use it
-1. (Optional) `Use this template` and `Create a new repository`.
-2. `git clone` into `${ROS_WORKSPACE}/src`.
-    Replace `ROS_WORKSPACE` and `GitHub URL`, then command the following.
-    ```
-    export ROS_WORKSPACE=$HOME/ros2_ws
-    mkdir -p $ROS_WORKSPACE/src && cd $ROS_WORKSPACE/src
-    git clone git@github.com:kimushun1101/cabot_teleop_joy_template.git
-    rosdep install -riy --from-paths $ROS_WORKSPACE/src/cabot_teleop_joy_template
-    ```
-3. `cd ${THIS_PKG_DIR}`, then execute scripts in `script` directory.
-    ```
-    ./script/1_rename_pkg_name_into_the_same_as_directory_name
-    ./script/2_make_new_assignment.bash
-    ./script/3_rebuild_and_launch.bash
-    ```
+
+```
+export ROS_WORKSPACE=$HOME/ros2_ws
+mkdir -p $ROS_WORKSPACE/src && cd $ROS_WORKSPACE/src
+git clone git@github.com:kimushun1101/cabot_teleop_joy_template.git
+rosdep install -riy --from-paths $ROS_WORKSPACE/src/cabot_teleop_joy_template
+colcon build --symlink-install
+source install/setup.bash
+ros2 launch cabot_teleop_joy teleop_joy.launch.yaml
+```
 
 ## Reference
 - [teleop_twist_joy](https://github.com/ros2/teleop_twist_joy)
