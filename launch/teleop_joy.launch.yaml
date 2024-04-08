@@ -10,9 +10,9 @@ launch:
             plugin: "joy::Joy"
             name: "joy"
         -
-            pkg: teleop_joy_component
-            plugin: "teleop_joy_component::TeleopJoy"
-            name: "teleop_joy_component"
+            pkg: cabot_teleop_joy
+            plugin: "cabot_teleop_joy::TeleopJoy"
+            name: "cabot_teleop_joy"
             param:
             # - {name: assignment_file, value: JC-U3912TBK.yaml}
             - {name: assignment_file, value: F710_D_input.yaml}

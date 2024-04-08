@@ -15,6 +15,6 @@
 # limitations under the License.
 
 cd `dirname $0`/../../.. # ros2 workspace directory
-colcon build --symlink-install --packages-select teleop_joy_component
+colcon build --symlink-install --packages-select cabot_teleop_joy
 . install/local_setup.bash
-ros2 launch teleop_joy_component teleop_joy.launch.py
+ros2 launch cabot_teleop_joy teleop_joy.launch.py

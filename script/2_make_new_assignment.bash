@@ -19,10 +19,10 @@ if [ $# -eq 1 ]; then
   script_dir=$(pwd)
 
   cd $script_dir/../../.. # ros2 workspace directory
-  colcon build --symlink-install --packages-select teleop_joy_component
+  colcon build --symlink-install --packages-select cabot_teleop_joy
   . install/local_setup.bash
   cd $script_dir/../config # config directory
-  ros2 launch teleop_joy_component config_joy.launch.py file_name:=$1
+  ros2 launch cabot_teleop_joy config_joy.launch.py file_name:=$1
   echo -e "\033[32mEdit $(pwd)/param.yaml then Rebuild\033[m"
 else
   echo -e "\033[31mSet the file name in the argument\033[m"

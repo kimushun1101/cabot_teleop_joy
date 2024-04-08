@@ -20,7 +20,7 @@ from launch_ros.actions import ComposableNodeContainer
 from launch_ros.descriptions import ComposableNode
 
 param_file = os.path.join(
-    get_package_share_directory('teleop_joy_component'), 'config', 'param.yaml')
+    get_package_share_directory('cabot_teleop_joy'), 'config', 'param.yaml')
 
 
 def generate_launch_description():
@@ -35,9 +35,9 @@ def generate_launch_description():
                 plugin='joy::Joy',
                 name='joy'),
             ComposableNode(
-                package='teleop_joy_component',
-                plugin='teleop_joy_component::TeleopJoy',
-                name='teleop_joy_component',
+                package='cabot_teleop_joy',
+                plugin='cabot_teleop_joy::TeleopJoy',
+                name='cabot_teleop_joy',
                 parameters=[param_file]),
         ],
         output='screen',

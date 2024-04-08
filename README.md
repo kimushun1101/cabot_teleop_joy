@@ -1,8 +1,8 @@
-# teleop_joy_component package
+# cabot_teleop_joy package
 This package translates `/joy` topic into `/cmd_vel` topic on **ROS 2 Composition**.  
 The following 2 compositions are launched.
 - joy joy_node
-- teleop_joy_component joy_to_cmd_vel_composition
+- cabot_teleop_joy joy_to_cmd_vel_composition
 
 ## How to use it
 1. (Optional) `Use this template` and `Create a new repository`.
@@ -11,8 +11,8 @@ The following 2 compositions are launched.
     ```
     export ROS_WORKSPACE=$HOME/ros2_ws
     mkdir -p $ROS_WORKSPACE/src && cd $ROS_WORKSPACE/src
-    git clone git@github.com:kimushun1101/teleop_joy_component_template.git
-    rosdep install -riy --from-paths $ROS_WORKSPACE/src/teleop_joy_component_template
+    git clone git@github.com:kimushun1101/cabot_teleop_joy_template.git
+    rosdep install -riy --from-paths $ROS_WORKSPACE/src/cabot_teleop_joy_template
     ```
 3. `cd ${THIS_PKG_DIR}`, then execute scripts in `script` directory.
     ```

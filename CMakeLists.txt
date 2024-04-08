@@ -13,14 +13,14 @@
 # limitations under the License.
 
 cmake_minimum_required(VERSION 3.8)
-project(teleop_joy_component)
+project(cabot_teleop_joy)
 
 find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
-ament_auto_add_library(teleop_joy_component SHARED src/teleop_joy_component.cpp)
-target_link_libraries(teleop_joy_component yaml-cpp) # Why is it necessary?
-rclcpp_components_register_nodes(teleop_joy_component "teleop_joy_component::TeleopJoy")
+ament_auto_add_library(cabot_teleop_joy SHARED src/cabot_teleop_joy.cpp)
+target_link_libraries(cabot_teleop_joy yaml-cpp) # Why is it necessary?
+rclcpp_components_register_nodes(cabot_teleop_joy "cabot_teleop_joy::TeleopJoy")
 ament_auto_add_executable(config_joy src/config_joy.cpp)
 
 install(DIRECTORY
