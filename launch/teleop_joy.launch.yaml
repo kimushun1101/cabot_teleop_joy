@@ -14,8 +14,8 @@ launch:
             plugin: "cabot_teleop_joy::TeleopJoy"
             name: "cabot_teleop_joy"
             param:
-            # - {name: assignment_file, value: JC-U3912TBK.yaml}
-            - {name: assignment_file, value: F710_D_input.yaml}
-            - {name: cmd_vel_topic_name, value: cmd_vel}
+            - {name: assignment_file, value: JC-U3912TBK.yaml}
+            # - {name: assignment_file, value: F710_D_input.yaml}
+            - {name: cmd_vel_topic_name, value: cabot/cmd_vel}
             - {name: max.v, value: 0.3}
             - {name: max.w, value: 0.5}
